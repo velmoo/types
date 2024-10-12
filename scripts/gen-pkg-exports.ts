@@ -13,7 +13,7 @@ const pkgJson = fs.readJsonSync(pkgJsonFile);
 const targetFolderName = "types";
 
 pkgJson.exports = {
-  ".": `./dist/index.js`,
+  ".": "./dist/index.d.mts",
   "./package.json": "./package.json",
 };
 
@@ -27,15 +27,15 @@ for (const item of targetFolderItems) {
 
   if (itemIsDir) {
     const key1 = `./${itemWithoutExt}`;
-    const value1 = `./dist/${itemWithoutExt}/index.js`;
+    const value1 = `./dist/${itemWithoutExt}/index.d.mts`;
     pkgJson.exports[key1] = value1;
 
     const key2 = `./${itemWithoutExt}/*`;
-    const value2 = `./dist/${itemWithoutExt}/*.js`;
+    const value2 = `./dist/${itemWithoutExt}/*.d.mts`;
     pkgJson.exports[key2] = value2;
   } else {
     const key = `./${itemWithoutExt}`;
-    const value = `./dist/${itemWithoutExt}.js`;
+    const value = `./dist/${itemWithoutExt}.d.mts`;
     pkgJson.exports[key] = value;
   }
 }

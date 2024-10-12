@@ -1,6 +1,6 @@
 {
   "name": "@velmoo/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collection of utility types.",
   "scripts": {
     "build": "pnpm format && tsup && pnpm gen-pkg-exports && pnpm del-js-files",
@@ -20,17 +20,17 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": "./dist/index.d.mts",
     "./package.json": "./package.json",
-    "./array": "./dist/array.js",
-    "./common": "./dist/common.js",
-    "./expensive": "./dist/expensive/index.js",
-    "./expensive/*": "./dist/expensive/*.js",
-    "./index": "./dist/index.js",
-    "./mix": "./dist/mix.js",
-    "./number": "./dist/number.js",
-    "./object": "./dist/object.js",
-    "./string": "./dist/string.js"
+    "./array": "./dist/array.d.mts",
+    "./common": "./dist/common.d.mts",
+    "./expensive": "./dist/expensive/index.d.mts",
+    "./expensive/*": "./dist/expensive/*.d.mts",
+    "./index": "./dist/index.d.mts",
+    "./mix": "./dist/mix.d.mts",
+    "./number": "./dist/number.d.mts",
+    "./object": "./dist/object.d.mts",
+    "./string": "./dist/string.d.mts"
   },
   "keywords": [
     "velmo",
