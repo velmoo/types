@@ -13,7 +13,7 @@ const checkDir = (dirPath: string = outDir) => {
   for (const item of dirItems) {
     if (fs.statSync(item).isDirectory()) {
       checkDir(item);
-    } else if (path.extname(item) === ".mjs") {
+    } else if ([".js", ".mjs"].includes(path.extname(item))) {
       fs.removeSync(item);
     }
   }

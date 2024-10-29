@@ -1,6 +1,6 @@
 {
   "name": "@velmoo/types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of utility types.",
   "scripts": {
     "build": "pnpm format && tsup && pnpm gen-pkg-exports && pnpm del-js-files",
